@@ -4,34 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/navBar.css">
     <title>Home Page</title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <img class="topBarIcon" src="../images/general/searchIcon.PNG" alt="SearchIcon" height="40px" width="40px">
-            <img class="topBarIcon" src="../images/general/cart.PNG" alt="CartIcon" height="40px" width="40px">
-            <img class="topBarIcon" src="../images/general/account.PNG" alt="AccountIcon" height="40px" width="40px">
+    <div class="header">
+        <div class="topBar">
+            <a href="home.html" style="text-decoration: none;">
+                <img class="logo" src="../images/general/websiteLogo.PNG" alt="GUMNUT" height="40px">
+            </a>
+            <div>
+                <img class="topBarIcon" src="../images/general/searchIcon.PNG" alt="SearchIcon" height="40px"
+                    width="40px">
+                <a href="shoppingCart.html" style="text-decoration: none;">
+                    <img class="topBarIcon" src="../images/general/cart.PNG" alt="CartIcon" height="40px" width="40px">
+                </a>
+                <img class="topBarIcon" src="../images/general/account.PNG" alt="AccountIcon" height="40px"
+                    width="40px">
+            </div>
         </div>
-        <div>
-            <p>
-                <span>HOME</span>
-                <span>ALL MTG</span>
-                <span>MTG STANDARD</span>
-            </p>
-        </div>
+        <nav class="navBar">
+            <a href="home.html" style="text-decoration: none;">
+                HOME
+            </a>
+            <a href="productList.html" style="text-decoration: none;">
+                ALL MTG
+            </a>
+            <a href="productList.html" style="text-decoration: none;">
+                MTG STANDARD
+            </a>
+            <a href="productList.html" style="text-decoration: none;">
+                MTG NON-STANDARD
+            </a>
+            <a href="productList.html" style="text-decoration: none;">
+                STAR WARS
+            </a>
+        </nav>
     </div>
     <div class="banner">
         <img class="bannerImage" src="../images/NewCapennaBanner.png" alt="Streets of New Capenna Category Banner">
     </div>
-    <div>
+    <div class="categoryShelf">
         <img src="../images/kaldheimLogo.jpg" alt="Kaldheim Category Image">
         <img src="../images/kamigawaLogo.jpg" alt="Kamigawa Category Image">
         <img src="../images/zendikarLogo.jpg" alt="Zendikar Category Image">
     </div>
-    <div>
+    <div class="recommended">
+
+    </div>
+    <div class="footer">
         
     </div>
 </body>

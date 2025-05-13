@@ -1,0 +1,10 @@
+.topBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar{
+    display: flex;
+    justify-content: left;
+    gap: 5em;
+}
