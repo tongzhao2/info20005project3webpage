@@ -1,11 +1,22 @@
 .banner{
-    margin-left: -8px;
-    margin-right: -8px;
+    min-width: 100vw;
     max-width: 100vw;
     object-fit: scale-down;
 }
 
 .bannerImage{
+    min-width: 100vw;
     max-width: 100vw;
     object-fit: scale-down;
+}
+
+.categoryShelf{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.categoryImg{
+    object-fit: scale-down;
+    max-width: 90vw;
 }

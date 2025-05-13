@@ -1,0 +1,24 @@
+
+.listings{
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+    gap: 1%;
+    margin-left: 1%;
+    
+}
+
+.product{
+    min-width: 24%;
+    max-width: 24%;
+}
+
+.productImage{
+    max-width: 100%;
+    object-fit: scale-down;
+}

@@ -4,7 +4,30 @@
 }
 
 .navBar{
+    background-color: lightgrey;
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     gap: 5em;
+    padding: 0.5%;
+}
+
+.header{
+    width: 100%;
+    align-self: left;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+*{
+    margin:0;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .navBar {
+        display: none;
+    }
 }
