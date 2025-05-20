@@ -10,19 +10,33 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id = "header">
         <div class="topBar">
-            <a href="home.html" style="text-decoration: none;">
-                <img class="logo" src="../images/general/websiteLogo.PNG" alt="GUMNUT" height="40px">
-            </a>
+            <div class = "mobile">
+                <button class="mobile">
+                    <img id="hamburgerImage" src="../images/general/Menu.jpg" alt="HAMBURGER" height="40px">
+                </button>
+            </div>
+            <div class = "mobile">
+                <a href="home.html" style="text-decoration: none;">
+                    <img class="logo" id="logoMobile" src="../images/general/websiteLogoMobile.PNG" alt="GUMNUT MOBILE" height="40px">
+                </a>
+            </div>
+            <div class = "desktop">
+                <a href="home.html" style="text-decoration: none;">
+                    <img class="logo" id="logoDesktop" src="../images/general/websiteLogo.PNG" alt="GUMNUT" height="40px">
+                </a>
+            </div>
+
+
             <div>
                 <img class="topBarIcon" src="../images/general/searchIcon.PNG" alt="SearchIcon" height="40px"
                     width="40px">
-                <a href="shoppingCart.html" style="text-decoration: none;">
-                    <img class="topBarIcon" src="../images/general/cart.PNG" alt="CartIcon" height="40px" width="40px">
-                </a>
-                <img class="topBarIcon" src="../images/general/account.PNG" alt="AccountIcon" height="40px"
-                    width="40px">
+                    <a class = "desktop" href="shoppingCart.html" style="text-decoration: none;">
+                        <img class="desktop topBarIcon" src="../images/general/cart.PNG" alt="CartIcon" height="40px" width="40px">
+                    </a>
+                    <img class="desktop topBarIcon" src="../images/general/account.PNG" alt="AccountIcon" height="40px" width="40px">
+            
             </div>
         </div>
         <nav class="navBar">

@@ -1,0 +1,29 @@
+.cart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.cartList{
+    background-color: lightgrey;
+    flex-basis: 50%;
+    flex-grow: 1;
+    position: sticky;
+    top: 0%;
+    max-height: 100vh;
+}
+
+.cartOptions{
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: top;
+    gap: 1%;
+    margin-left: 1%;
+    
+}
