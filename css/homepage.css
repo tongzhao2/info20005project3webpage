@@ -3,7 +3,7 @@
 }
 
 .bannerImage{
-    max-width: 100vw;
+    width: 100vw;
     justify-self: center;
     object-fit: scale-down;
 }
@@ -23,6 +23,7 @@
 @media only screen and (max-width: 600px){
     .bannerImage{
         height: 60vh;
+        max-width: 100vw;
         object-fit: cover;
     }
 }
