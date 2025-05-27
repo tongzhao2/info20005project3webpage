@@ -3,7 +3,7 @@
 }
 
 .bannerImage{
-    width: 100vw;
+    max-width: 100%;
     justify-self: center;
     object-fit: scale-down;
 }
