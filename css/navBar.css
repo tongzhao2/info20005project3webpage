@@ -1,3 +1,16 @@
+#hamburger{
+    position: fixed;
+    display: none;
+    width: 95vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left:0;
+    background-color:white;
+    
+    
+}
+
 .mobile{
     display: none;
 }
@@ -34,6 +47,7 @@
 
 *{
     margin:0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -42,9 +56,48 @@
     border: none;
 }
 
+#hamburgerCloseButton{
+    background-color: white;
+    border: none;
+}
+
+.hamburgerHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.navLink{
+    text-decoration: none;
+    color:black;
+}
+
+.hamburgerLink{
+    font:bold;
+    font-size: 2em;
+    margin: 5%
+}
+
+#hamburgerFooter{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 100%;
+}
+
+.hamburgerFooterRow{
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5%
+}
+
 @media only screen and (max-width: 600px){
     .navBar {
         display: none;
+        
     }
 
     .desktop{
