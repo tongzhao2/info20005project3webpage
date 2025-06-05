@@ -19,6 +19,10 @@
     object-fit: scale-down;
 }
 
+#spacer{
+    width: 5%;
+}
+
 @media only screen and (max-width: 600px) {
     .listing {
         display: block;
