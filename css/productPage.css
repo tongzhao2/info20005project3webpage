@@ -1,0 +1,46 @@
+.listing {
+    display: flex;
+    justify-content: center;
+
+}
+
+.listingImage {
+    width: 35vw;
+    margin: 2%;
+}
+
+.listingDetails {
+    width: 40vw;
+    margin: 2%;
+}
+
+img {
+    object-fit: scale-down;
+    max-height: 80vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .listing {
+        display: block;
+        justify-content: center;
+
+    }
+
+    .listingImage {
+        width: 100vw;
+        margin: 2%;
+    }
+
+    img {
+        object-fit: scale-down;
+        justify-self: center;
+        max-height: 70vh;
+        max-width: 90vw;
+    }
+
+    .listingDetails {
+        width: 100vw;
+        margin: 3%;
+    }
+
+}

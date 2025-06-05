@@ -1,4 +1,4 @@
-.product{
+.product {
     max-width: fit-content;
     max-height: fit-content;
     display: flex;
@@ -7,15 +7,14 @@
     align-items: center;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 100vh;
 }
 
-.sidebar{
-
+.sidebar {
     background-color: rgb(220, 220, 220);
     flex-basis: 25%;
     flex-grow: 1;
@@ -24,7 +23,7 @@
     height: 100vh;
 }
 
-.listings{
+.listings {
     flex-basis: 0;
     flex-grow: 999;
     min-width: 70%;
@@ -38,10 +37,16 @@
     padding: 1%;
 }
 
-.productTag{
+.productTag {
     justify-self: center;
 }
 
-button{
+button {
     width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
 }

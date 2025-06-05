@@ -4,25 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link red="stylesheet" href="./css/cartItem.css">-->
     <link rel="stylesheet" href="./css/shoppingCart.css">
     <link rel="stylesheet" href="./css/navBar.css">
-    <link red="stylesheet" href="./css/cartItem.css">
+    <script src="./javascript/navBar.js"></script>
     <title>Shopping Cart</title>
 </head>
 
 <body>
-    <div class="header"></div>
+    <div class="header" id="header">
 
-    <div class = "cartList">
-        <div class = "cartItems">
-            <div class="cartItem" id="goblinMorningstar">
-                <a href="./productPageGoblinMorningstar.html">
-                    <img src="./images/products/goblinMorningstar.jpg" alt="Goblin Morningstar">
+        <div class="topBar">
+            <div class="mobile">
+                <button class="mobile" id="hamburgerButton" onclick="hamburgerOn()">
+                    <img id="hamburgerImage" src="./images/general/Menu.jpg" alt="HAMBURGER" height="40px">
+                </button>
+            </div>
+            <div class="mobile">
+                <a href="index.html" style="text-decoration: none;">
+                    <img class="logo" id="logoMobile" src="./images/general/websiteLogoMobile.PNG" alt="GUMNUT MOBILE"
+                        height="40px">
                 </a>
             </div>
+            <div class="desktop">
+                <a href="index.html" style="text-decoration: none;">
+                    <img class="logo" id="logoDesktop" src="./images/general/websiteLogo.PNG" alt="GUMNUT"
+                        height="40px">
+                </a>
+            </div>
+
+
+            <div>
+                <img class="topBarIcon" src="./images/general/searchIcon.PNG" alt="SearchIcon" height="40px"
+                    width="40px">
+                <a class="desktop" href="shoppingCart.html" style="text-decoration: none;">
+                    <img class="desktop topBarIcon" src="./images/general/cart.PNG" alt="CartIcon" height="40px"
+                        width="40px">
+                </a>
+                <img class="desktop topBarIcon" src="./images/general/account.PNG" alt="AccountIcon" height="40px"
+                    width="40px">
+
+            </div>
         </div>
-        <div class ="cartOptions">
-            <h1>CART</h1>
+        <div id="hamburger">
+            <div class="hamburgerHeader">
+                <img class="mobile logo hamburgerIcon" id="logoHamburger" src="./images/general/websiteLogo.PNG"
+                    alt="GUMNUT" height="40px">
+                <button class="mobile hamburgerIcon" id="hamburgerCloseButton" onclick="hamburgerOff()">
+                    <img id="hamburgerCloseImage" src="./images/general/close.jpg" alt="HAMBURGER CLOSE" height="40px">
+                </button>
+            </div>
+            <div class="hamburgerLinkBlock">
+                <div class="hamburgerLink">
+                    <a class="navLink" href="index.html" style="text-decoration: none;">
+                        HOME
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        ALL MTG
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        MTG STANDARD
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        MTG NON-STANDARD
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        STAR WARS
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        BUY LIST
+                    </a>
+                </div>
+                <div class="hamburgerLink">
+                    <a class="navLink" href="productList.html" style="text-decoration: none;">
+                        GUMNUT GAMES
+                    </a>
+                </div>
+            </div>
+            <div id="hamburgerFooter">
+                <div class="hamburgerFooterRow">
+                    <div>
+                        <a class="mobile" href="shoppingCart.html" style="text-decoration: none;"></a>
+                        <h1>CART</h1>
+                    </div>
+                    <div>
+                        <a class="mobile" href="shoppingCart.html" style="text-decoration: none;">
+                            <img class="mobile hamburgerIcon" src="./images/general/cart.PNG" alt="CartIcon"
+                                height="40px" width="40px">
+                        </a>
+                    </div>
+                </div>
+                <div class="hamburgerFooterRow">
+                    <div>
+                        <h1>ACCOUNT</h1>
+                    </div>
+                    <div>
+                        <img class="mobile hamburgerIcon" src="./images/general/account.PNG" alt="AccountIcon"
+                            height="40px" width="40px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navBar">
+            <a class="navLink" href="index.html" style="text-decoration: none;">
+                HOME
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                ALL MTG
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                MTG STANDARD
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                MTG NON-STANDARD
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                STAR WARS
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                BUY LIST
+            </a>
+            <a class="navLink" href="productList.html" style="text-decoration: none;">
+                GUMNUT GAMES
+            </a>
+        </nav>
+    </div>
+
+    <div class="cart">
+        <div class="cartList">
+            <div class="cartItem">
+                <div class ="itemImage">
+                    <a href="./productPageGoblinMorningstar.html">
+                        <img class="productImage" src="./images/products/goblinMorningstar.jpg"
+                            alt="Goblin Morningstar">
+                    </a>
+                </div>
+                <div class="itemControls">
+                    <p class="productTag">Goblin Morningstar</p>
+                    <p class="productTag">$0.60</p>
+                    <button>ADD TO CART</button>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="cartOptions">
+
         </div>
     </div>
 

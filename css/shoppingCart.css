@@ -1,29 +1,84 @@
-.cart{
+.cart {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
     min-height: 100vh;
 }
 
-.cartList{
-    background-color: lightgrey;
-    flex-basis: 50%;
+.cartOptions {
+    background-color: blue;
+    flex-basis: 25%;
     flex-grow: 1;
-    position: sticky;
-    top: 0%;
-    max-height: 100vh;
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
 }
 
-.cartOptions{
+.cartList {
+    background-color: red;
     flex-basis: 0;
     flex-grow: 999;
-    min-width: 50%;
+    min-width: 75vw;
+    padding: 1%;
+}
+
+.cartItem {
+    background-color: orange;
+    justify-self: left;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: top;
-    gap: 1%;
-    margin-left: 1%;
-    
+    padding: 0%;
+    width: 74%;
+    justify-content: space-between;
+}
+
+.productImage {
+    object-fit: scale-down;
+    min-width: 25vw;
+    max-height: 40vh;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .cart {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        min-height: 100vh;
+    }
+
+    .cartOptions {
+        background-color: grey;
+        flex-basis: 25%;
+        flex-grow: 1;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 25vh;
+    }
+
+    .cartList {
+        background-color: white;
+        flex-basis: 0;
+        flex-grow: 999;
+        min-width: 100vw;
+        padding: 1%;
+    }
+
+    .cartItem {
+        background-color: lightgrey;
+        justify-self: center;
+        display: flex;
+        padding: 2%;
+        width: 95%;
+    }
+
+    .productImage {
+        object-fit: scale-down;
+        min-width: 40vw;
+        max-height: 35vh;
+    }
+
 }
