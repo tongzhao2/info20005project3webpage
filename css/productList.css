@@ -1,10 +1,15 @@
 .product {
+    align-self: top;
     max-width: fit-content;
     max-height: fit-content;
     display: flex;
     padding: 0em;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-width: 24%;
+    max-width: 24%;
+
 }
 
 .content {
@@ -14,7 +19,8 @@
     min-height: 100vh;
 }
 
-.sidebar {
+#sidebar {
+    display: block;
     background-color: rgb(220, 220, 220);
     flex-basis: 25%;
     flex-grow: 1;
@@ -24,29 +30,162 @@
 }
 
 .listings {
-    flex-basis: 0;
-    flex-grow: 999;
     min-width: 70%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: top;
-    gap: 1%;
+    display: block;
     margin-left: 25vw;
     padding: 1%;
 }
 
 .productTag {
     justify-self: center;
+    color: black;
 }
 
-button {
+#filterTag {
+    margin: 3%;
+}
+
+.addButton {
     width: 100%;
+    color: white;
+    border: none;
+    background-color: red;
+    border-color: red;
+    margin-bottom: 2%;
+}
+
+.buyButton {
+    width: 100%;
+    color: black;
+    border: none;
+    background-color: lightgrey;
+    border-color: lightgrey;
+    box-shadow: none;
+}
+
+#sortBy {
+    width: 100%;
+    max-height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.products {
+    display: flex;
+    justify-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: top;
+    gap: 1%;
+}
+
+.filterType {
+    margin: 3%;
+}
+
+.filterColumns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filterColumn {
+    width: 50%;
+}
+
+#filterButton {
+    display: none;
+    border-radius: 25px;
+    background-color: rgb(220, 220, 220);
+    border-color: rgb(220, 220, 220);
+}
+
+#filterCloseButton{
+    border:none;
+    background-color: rgb(220, 220, 220);
+    height: 40px;
+    width:40px;
+}
+
+#filterTitle{
+    display: flex;
+}
+
+#filterHeader{
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filterIcon{
+    height: 40px;
+    width:40px;
+}
+
+@media only screen and (min-width: 600px) {
+    #sidebar {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .sidebar {
+    #sidebar {
         display: none;
+        position: fixed;
+        width: 100vw;
+        height: 70vh;
+        bottom: 0;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        min-height: 100%;
+    }
+
+    .listings {
+        width: 100vw;
+        min-height: 100%;
+        margin: auto;
+    }
+
+    #sortBy {
+        margin-bottom: 2%;
+
+    }
+
+    .products {
+        display: flex;
+        justify-self: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: top;
+        gap: 1%;
+
+    }
+
+    .product {
+        max-height: fit-content;
+        display: flex;
+        padding: 0em;
+        flex-direction: column;
+        align-items: center;
+        min-width: 48%;
+        max-width: 48%;
+    }
+
+    #filterButton {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 3vh;
+        right: 4vw;
+
     }
 }

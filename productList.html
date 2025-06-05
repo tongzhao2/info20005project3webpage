@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./css/productList.css">
     <link rel="stylesheet" href="./css/productListing.css">
     <link rel="stylesheet" href="./css/navBar.css">
+    <link rel="stylesheet" href="./css/general.css">
     <script src="./javascript/navBar.js"></script>
+    <script src="./javascript/productFilter.js"></script>
     <title>List of Products</title>
 </head>
 
-<body>
+<body onresize="filterCheck()">
     <div class="header" id="header">
         <div class="topBar">
             <div class="mobile">
@@ -93,8 +95,9 @@
             <div id="hamburgerFooter">
                 <div class="hamburgerFooterRow">
                     <div>
-                        <a class="mobile" href="shoppingCart.html" style="text-decoration: none;"></a>
-                        <h1>CART</h1>
+                        <a class="mobile" href="shoppingCart.html" style="text-decoration: none;">
+                            <h1>CART</h1>
+                        </a>
                     </div>
                     <div>
                         <a class="mobile" href="shoppingCart.html" style="text-decoration: none;">
@@ -143,23 +146,185 @@
 
 
     <div class="content">
-        <div class="sidebar">
-            <h2> FILTER</h2>
-        </div>
-        <div class="listings">
+        <div id="sidebar">
+            <div id="filterHeader">
+                <span id="filterTitle">
+                    <img class="filterIcon" src="./images/general/Filter.png" alt="Filter">
+                    <h1 id="filterTag">FILTER</h1>
+                </span>
+                <button class="mobile" id="filterCloseButton" onclick="filterHide()">
+                    <img src="./images/general/close.png" alt="Filter">
+                </button>
+            </div>
+            <div class="filterType">
+                <h2>Colour</h2>
+                <div class="filterColumns">
+                    <div class="filterColumn">
+                        <input type="checkbox" id="colourFilter" name="colour1" value="White">
+                        <label for="colour1">White</label>
+                        <br>
+                        <input type="checkbox" id="colourFilter" name="colour2" value="Blue">
+                        <label for="colour2">Blue</label>
+                        <br>
+                        <input type="checkbox" id="colourFilter" name="colour3" value="Black">
+                        <label for="colour3">Black</label>
+                        <br>
+                    </div>
+                    <div class="filterColumn">
+                        <input type="checkbox" id="colourFilter" name="colour4" value="Red">
+                        <label for="colour4">Red</label>
+                        <br>
+                        <input type="checkbox" id="colourFilter" name="colour5" value="Green">
+                        <label for="colour5">Green</label>
+                        <br>
+                        <input type="checkbox" id="colourFilter" name="colour6" value="Colourless">
+                        <label for="colour6">Colourless</label>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="filterType">
+                <h2>Rarity</h2>
+                <div class="filterColumns">
+                    <div class="filterColumn">
+                        <input type="checkbox" id="rarityFilter" name="rarity1" value="Common">
+                        <label for="rarity">Common</label>
+                        <br>
+                        <input type="checkbox" id="rarityFilter" name="rarity2" value="Uncommon">
+                        <label for="rarity2">Uncommon</label>
+                        <br>
+                    </div>
+                    <div class="filterColumn">
+                        <input type="checkbox" id="rarityFilter" name="rarity3" value="Rare">
+                        <label for="rarity1">Rare</label>
+                        <br>
+                        <input type="checkbox" id="rarityFilter" name="rarity4" value="Mythic">
+                        <label for="rarity2">Mythic</label>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="filterType">
+                <h2>Types</h2>
+                <div class="filterColumns">
+                    <div class="filterColumn">
+                        <input type="checkbox" id="typeFilter" name="type1" value="Instant">
+                        <label for="type1">Instant</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type2" value="Creature">
+                        <label for="type2">Creature</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type3" value="Sorcery">
+                        <label for="type3">Sorcery</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type4" value="Enchantment">
+                        <label for="type4">Enchantment</label>
+                        <br>
 
-            <div class="product">
-                <a href="./productPageGoblinMorningstar.html">
-                    <img class="productImage" src="./images/products/goblinMorningstar.jpg" alt="Goblin Morningstar">
-                    <p class="productTag">Goblin Morningstar</p>
-                    <p class="productTag">$0.60</p>
-                </a>
-                <button>ADD TO CART</button>
-                <button>BUY NOW</button>
+                    </div>
+                    <div class="filterColumn">
+                        <input type="checkbox" id="typeFilter" name="type5" value="Artifact">
+                        <label for="type5">Artifact</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type6" value="Land">
+                        <label for="type6">Land</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type7" value="Planeswalker">
+                        <label for="type7">Planeswalker</label>
+                        <br>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="filterColumns">
+                    <div class="filterColumn">
+                        <input type="checkbox" id="typeFilter" name="type8" value="Legendary">
+                        <label for="type8">Legendary</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type9" value="Human">
+                        <label for="type9">Human</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type10" value="Elf">
+                        <label for="type10">Elf</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type11" value="Warrior">
+                        <label for="type11">Warrior</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type12" value="Druid">
+                        <label for="type12">Druid</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type13" value="Dwarf">
+                        <label for="type13">Dwarf</label>
+                        <br>
+
+                    </div>
+                    <div class="filterColumn">
+                        <input type="checkbox" id="typeFilter" name="type14" value="Construct">
+                        <label for="type14">Construct</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type15" value="Vehicle">
+                        <label for="type15">Vehicle</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type16" value="Aura">
+                        <label for="type16">Aura</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type17" value="Beast">
+                        <label for="type17">Beast</label>
+                        <br>
+                        <input type="checkbox" id="typeFilter" name="type18" value="Rogue">
+                        <label for="type18">Rogue</label>
+                        <br>
+
+
+                    </div>
+                </div>
             </div>
 
+        </div>
+        <div class="listings">
+            <div id="sortBy">
+                <p>Sort by:</p>
+
+                <select>
+                    <option>Featured</option>
+                    <option>Date: Old to New</option>
+                    <option>Date: New to Old</option>
+                </select>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <a href="./productPageGoblinMorningstar.html">
+                        <img class="productImage" src="./images/products/goblinMorningstar.jpg"
+                            alt="Goblin Morningstar">
+                        <p class="productTag">Goblin Morningstar</p>
+                        <p class="productTag">$0.60</p>
+                    </a>
+                    <button class="addButton">ADD TO CART</button>
+                    <button class="buyButton">BUY NOW</button>
+                </div>
+
+                <div class="product">
+                    <a href="./productPageGoblinMorningstar.html">
+                        <img class="productImage" src="./images/products/goblinMorningstar.jpg"
+                            alt="Goblin Morningstar">
+                        <p class="productTag">PLACEHOLDER</p>
+                        <p class="productTag">$0.60</p>
+                    </a>
+                    <button class="addButton">ADD TO CART</button>
+                    <button class="buyButton">BUY NOW</button>
+                </div>
+
+            </div>
 
         </div>
+
+    </div>
+
+    <button id="filterButton" onclick="filterShow()">
+        <h1>FILTER</h1>
+        <img class="filterIcon" src="./images/general/Filter.png" alt="Filter">
+    </button>
+
 
 
 </body>

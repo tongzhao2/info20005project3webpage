@@ -12,6 +12,7 @@
     position: fixed;
     width: 25vw;
     height: 100vh;
+    z-index: 1;
 }
 
 .cartList {
@@ -26,14 +27,15 @@
     background-color: orange;
     justify-self: left;
     display: flex;
-    padding: 0%;
+    padding: 5%;
     width: 74%;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .productImage {
     object-fit: scale-down;
-    min-width: 25vw;
+    min-width: 24vw;
+    max-width: 40vw;
     max-height: 40vh;
 }
 
