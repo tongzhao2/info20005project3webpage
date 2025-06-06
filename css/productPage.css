@@ -1,3 +1,8 @@
+#topPadding{
+    display: block;
+    height: 2vh;
+}
+
 .listing {
     display: flex;
     justify-content: center;
@@ -5,7 +10,7 @@
 }
 
 .listingImage {
-    display:flex;
+    display: flex;
     justify-content: center;
     width: 35vw;
 }
@@ -19,11 +24,98 @@
     object-fit: scale-down;
 }
 
-#spacer{
+#spacer {
     width: 5%;
 }
 
+#itemDescription {
+    display: block;
+
+}
+
+#showHideDescButton {
+    border: none;
+    background-color: white;
+}
+
+
+.quantitySelect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 10px;
+
+}
+
+.quantityButton {
+    width: 50px;
+    height: 50px;
+}
+
+#quantityDiv {
+    background-color: rgb(228, 228, 228);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+#quantity {
+
+    font-size: 48;
+}
+
+.buyButton {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18pt;
+}
+
+#cartButton {
+    color: white;
+    border: none;
+    background-color: red;
+    border-color: red;
+    
+    padding: 2%;
+}
+
+#buyNowButton{
+    color: black;
+    border: none;
+    background-color: lightgrey;
+    border-color: lightgrey;
+    box-shadow: none;
+    
+    padding: 2%;
+}
+
+.descControl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 600px) {
+    #listingTitle {
+        font-size: 36pt;
+    }
+
+    #listingPrice {
+        font-size: 40pt;
+    }
+
+    #cartButton{
+    width: 60%;
+}
+
+}
+
 @media only screen and (max-width: 600px) {
+    #topPadding{
+        display: none;
+    }
+
     .listing {
         display: block;
         justify-content: center;
@@ -31,7 +123,7 @@
     }
 
     .listingImage {
-        display:flex;
+        display: flex;
         justify-content: center;
         width: 100vw;
     }
@@ -43,8 +135,13 @@
     }
 
     .listingDetails {
-        width: 100vw;
+        width: 95%;
         padding: 3%;
     }
 
+    #itemDescription {
+        display: none;
+    }
+
+    
 }

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="./css/productPage.css">
     <link rel="stylesheet" href="./css/navBar.css">
     <script src="./javascript/navBar.js"></script>
-    <title>Goblin Morningstar</title>
+    <script src="./javascript/productPage.js"></script>
+    <title>TCG @ Gumnut - Goblin Morningstar</title>
 </head>
 
-<body>
+<body onresize="viewCheck()">
     <div class="header" id="header">
 
         <div class="topBar">
@@ -141,7 +142,9 @@
     </div>
 
 
+    <div id="topPadding">
 
+    </div>
     <div class="listing">
         <div class="listingImage">
             <img class="imgProduct" src="./images/products/goblinMorningstar.jpg" alt="Goblin Morningstar">
@@ -149,13 +152,49 @@
         <div id="spacer">
         </div>
         <div class="listingDetails">
-            <h1>Goblin Morningstar</h1>
-            <h1>$ 0.60</h1>
-            <h2>DESCRIPTION</h2>
-            <p>
-
-            </p>
+            <h1 id="listingTitle">Goblin Morningstar</h1>
+            <h1 id="listingPrice">$ 0.60</h1>
+            <div class="quantitySelect">
+                <button class="quantityButton" onclick="quanMinus()"><img src="./images/general/Minus.png"></button>
+                <div id="quantityDiv">
+                    <h1 id="quantity">1</h1>
+                </div>
+                <button class="quantityButton" onclick="quanPlus()"><img src="./images/general/Plus.png"></button>
+            </div>
+            <div class="cartButtonDiv">
+                <button class="buyButton" id="cartButton">ADD TO CART</button>
+                <button class="mobile buyButton" id="buyNowButton">BUY NOW</button>
+            </div>
+            <div class="descControl">
+                <h2>DESCRIPTION</h2>
+                <Button id="showHideDescButton" onclick="showHideDesc()">
+                    <img id="descIcon" src="./images/general/Minus.png">
+                </Button>
+            </div>
+            <div id="itemDescription">
+                <p>
+                    Goblin Morningstar {1}{R}
+                </p>
+                <p>
+                    Artifact — Equipment
+                </p>
+                <p>
+                    Equipped creature gets +1/+0 and has trample.
+                </p>
+                <p>
+                    Equip {1}{R}
+                </p>
+                <p>
+                    When this Equipment enters, roll a d20.
+                </p>
+                <p>1—9 | Create a 1/1 red Goblin creature token.
+                </p>
+                <p>10—20 | Create a 1/1 red Goblin creature token, then attach this Equipment to it.
+                </p>
+            </div>
         </div>
+    </div>
+    <div>
     </div>
 </body>
 
