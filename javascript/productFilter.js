@@ -11,6 +11,7 @@ function filterHide(){
     document.getElementById("filterButton").style.display = "flex";
 }
 
+//resets filter to always show when in desktop view
 function filterCheck(){
     if (window.innerWidth <= 600){
         console.log("mobileSize");

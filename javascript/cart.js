@@ -1,6 +1,8 @@
+//prices
 const PRICE_GM = 0.6;
 const PRICE_SIC = 0.6;
 
+//for goblin morningstar item
 function quanMinusGM() {
     document.getElementById("quantityGM").innerHTML = (parseInt(document.getElementById("quantityGM").innerHTML) - 1);
     if (parseInt(document.getElementById("quantityGM").innerHTML) < 1) {
@@ -19,6 +21,7 @@ function deleteGM() {
     updatePrices();
 }
 
+//for saw it coming item
 function quanMinusSIC() {
     document.getElementById("quantitySIC").innerHTML = (parseInt(document.getElementById("quantitySIC").innerHTML) - 1);
     if (parseInt(document.getElementById("quantitySIC").innerHTML) < 1) {
@@ -37,6 +40,7 @@ function deleteSIC() {
     updatePrices();
 }
 
+//calculate the prices of stacks of items
 function updatePrices(){
     let quantityGM = parseInt(document.getElementById("quantityGM").innerHTML);
     let totalPriceGM = quantityGM * PRICE_GM;
@@ -48,6 +52,7 @@ function updatePrices(){
     updateSubtotal();
 }
 
+//calculate subtotal from all items
 function updateSubtotal() {
     let subtotalPrice = 0;
     let totalPriceGM = parseFloat(document.getElementById("priceGM").innerHTML.slice(2));
