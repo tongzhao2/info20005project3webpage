@@ -20,6 +20,10 @@
     max-width: 90vw;
 }
 
+#introduction{
+    background-color: #FBFBFB;
+    padding:3%;
+}
 
 @media only screen and (max-width: 600px){
     .bannerImage{

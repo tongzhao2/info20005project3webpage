@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--<link red="stylesheet" href="./css/cartItem.css">-->
-    <link rel="stylesheet" href="./css/shoppingCart.css">
+    <link rel="stylesheet" href="./css/productPage.css">
     <link rel="stylesheet" href="./css/navBar.css">
     <script src="./javascript/navBar.js"></script>
-    <script src="./javascript/cart.js"></script>
-
-    <title>My Shopping Cart</title>
+    <script src="./javascript/productPage.js"></script>
+    <title>TCG @ Gumnut - Saw It Coming</title>
 </head>
 
-<body onload="updatePrices()">
+<body onresize="viewCheck()">
     <div class="header" id="header">
 
         <div class="topBar">
@@ -144,117 +141,54 @@
         </nav>
     </div>
 
-    <div class="cart">
-        <div class="cartList">
-            <div class="cartItems">
-                <div id="cartLabel">
-                    <h1>Shopping Cart</h1>
-                </div>
-                <div class="cartItemCard" id="goblinMorningstar">
-                    <div class="itemImage">
-                        <a href="./productPageGoblinMorningstar.html">
-                            <img class="productImage" src="./images/products/goblinMorningstar.jpg"
-                                alt="Goblin Morningstar">
-                        </a>
-                    </div>
-                    <div class="itemControls">
-                        <div class="itemControlsRow">
-                            <div class="productName">
-                                <h1 class="productText">Goblin Morningstar</h1>
-                            </div>
-                            <button class="deleteButton" id="deleteGM" onclick="deleteGM()">
-                                <img src="./images/general/close.png" alt="Delete Cart Item">
-                            </button>
-                        </div>
-                        <div>
-                            <div class="quantitySelect">
-                                <button class="quantityButton" onclick="quanMinusGM()">
-                                    <img src="./images/general/Minus.png">
-                                </button>
-                                <div id="quantityDiv">
-                                    <h1 class="quantity" id="quantityGM">1</h1>
-                                </div>
-                                <button class="quantityButton" onclick="quanPlusGM()">
-                                    <img src="./images/general/Plus.png">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="itemPrice">
-                            <h1 class="productText price" id="priceGM">$ 0.60</h1>
-                        </div>
 
-                    </div>
-                </div>
+    <div id="topPadding">
 
-                <div class="cartItemCard" id="sawItComing">
-                    <div class="itemImage">
-                        <a href="./productPageSawItComing.html">
-                            <img class="productImage" src="./images/products/sawItComing.jpg" alt="sawItComing">
-                        </a>
-                    </div>
-                    <div class="itemControls">
-                        <div class="itemControlsRow">
-                            <div class="productName">
-                                <h1 class="productText">Saw It Coming</h1>
-                            </div>
-                            <button class="deleteButton" id="deleteSIC" onclick="deleteSIC()">
-                                <img src="./images/general/close.png" alt="Delete Cart Item">
-                            </button>
-                        </div>
-                        <div>
-                            <div class="quantitySelect">
-                                <button class="quantityButton" onclick="quanMinusSIC()">
-                                    <img src="./images/general/Minus.png">
-                                </button>
-                                <div id="quantityDiv">
-                                    <h1 class="quantity" id="quantitySIC">1</h1>
-                                </div>
-                                <button class="quantityButton" onclick="quanPlusSIC()">
-                                    <img src="./images/general/Plus.png">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="itemPrice">
-                            <h1 class="productText price" id="priceSIC">$ 0.60</h1>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
+    </div>
+    <div class="listing">
+        <div class="listingImage">
+            <img class="imgProduct" src="./images/products/sawItComing.jpg" alt="Saw It Coming">
         </div>
-        <div class="cartOptions">
-            <div class="desktop" id="speInsDiv">
-                <input id="desktopInstructions" class="desktop specialInstructions" type="text"
-                    placeholder="Special Instructions"></input>
+        <div id="spacer">
+        </div>
+        <div class="listingDetails">
+            <h1 id="listingTitle">Saw It Coming</h1>
+            <h1 id="listingPrice">$ 0.60</h1>
+            <div class="quantitySelect">
+                <button class="quantityButton" onclick="quanMinus()"><img src="./images/general/Minus.png"></button>
+                <div id="quantityDiv">
+                    <h1 id="quantity">1</h1>
+                </div>
+                <button class="quantityButton" onclick="quanPlus()"><img src="./images/general/Plus.png"></button>
             </div>
-            <div id="checkoutBox">
-                <hr class="mobile">
-                <p class="desktop">Shipping, taxes, and discounts will be calculated at checkout.</p>
-                <div class="subtotalDisplay">
-                <h1 id="subtotalHeader">SUBTOTAL</h1>
-                </div>
-                <div class="subtotalDisplay">
-                <h1 id="subtotalPrice">$ 0.00</h1>
-                </div>
-                <input id="mobileInstructions" class="mobile specialInstructions" type="text"
-                    placeholder="Special Instructions"></input>
-                <button class="checkoutButton" id="checkoutButton">
-                    <h1>CHECKOUT</h1>
-                </button>
-                <br>
-                <button class="desktop checkoutButton" id="gPayButton">
-                    <img src="./images/checkout/gPayIcon.png">
-                </button>
-                <br>
-                <button class="desktop checkoutButton" id="shopPayButton">
-                    <img src="./images/checkout/shopPayIcon.png">
-                </button>
+            <div class="cartButtonDiv">
+                <button class="buyButton" id="cartButton">ADD TO CART</button>
+                <button class="mobile buyButton" id="buyNowButton">BUY NOW</button>
+            </div>
+            <div class="descControl">
+                <h2>DESCRIPTION</h2>
+                <Button id="showHideDescButton" onclick="showHideDesc()">
+                    <img id="descIcon" src="./images/general/Minus.png">
+                </Button>
+            </div>
+            <div id="itemDescription">
+                <p>
+                    Saw It Coming {1}{U}{U}</p>
+                <p>
+                    Instant</p>
+                <p>
+                    Counter target spell.</p>
+                <p>
+                    Foretell {1}{U} (During your turn, you may pay {2} and exile this card from your hand face down.
+                    Cast it on a later turn for its foretell cost.) </p>
+                <hr>
+                <p><i>“How predictable.”</i>
+                </p>
             </div>
         </div>
     </div>
-
+    <div>
+    </div>
 </body>
 
 </html>

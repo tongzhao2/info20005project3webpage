@@ -1,4 +1,4 @@
-#topPadding{
+#topPadding {
     display: block;
     height: 2vh;
 }
@@ -50,6 +50,9 @@
 .quantityButton {
     width: 50px;
     height: 50px;
+
+    border: none;
+    background-color: white;
 }
 
 #quantityDiv {
@@ -76,17 +79,17 @@
     border: none;
     background-color: red;
     border-color: red;
-    
+
     padding: 2%;
 }
 
-#buyNowButton{
+#buyNowButton {
     color: black;
     border: none;
     background-color: lightgrey;
     border-color: lightgrey;
     box-shadow: none;
-    
+
     padding: 2%;
 }
 
@@ -105,14 +108,14 @@
         font-size: 40pt;
     }
 
-    #cartButton{
-    width: 60%;
-}
+    #cartButton {
+        width: 60%;
+    }
 
 }
 
 @media only screen and (max-width: 600px) {
-    #topPadding{
+    #topPadding {
         display: none;
     }
 
@@ -143,5 +146,5 @@
         display: none;
     }
 
-    
+
 }

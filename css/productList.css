@@ -9,7 +9,11 @@
     justify-content: center;
     min-width: 24%;
     max-width: 24%;
+    margin-bottom: 15px;
+}
 
+.productButton{
+    height: 25px;
 }
 
 .content {
@@ -21,7 +25,7 @@
 
 #sidebar {
     display: block;
-    background-color: rgb(220, 220, 220);
+    background-color: #FBFBFB;
     flex-basis: 25%;
     flex-grow: 1;
     position: fixed;
@@ -69,6 +73,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
+    
+    margin-bottom: 15px;
 }
 
 .products {
@@ -101,27 +107,37 @@
     border-color: rgb(220, 220, 220);
 }
 
-#filterCloseButton{
-    border:none;
-    background-color: rgb(220, 220, 220);
+#filterCloseButton {
+    border: none;
+    background-color: white;
     height: 40px;
-    width:40px;
+    width: 40px;
 }
 
-#filterTitle{
+#filterTitle {
     display: flex;
 }
 
-#filterHeader{
+#filterHeader {
     margin: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.filterIcon{
+.filterIcon {
     height: 40px;
-    width:40px;
+    width: 40px;
+}
+
+#otherPages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productNav{
+    margin: 2%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -134,6 +150,7 @@
     #sidebar {
         display: none;
         position: fixed;
+        background-color: white;
         width: 100vw;
         height: 70vh;
         bottom: 0;

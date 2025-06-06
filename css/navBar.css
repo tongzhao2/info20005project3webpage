@@ -94,11 +94,9 @@
     margin: 5%
 }
 
-@media only screen and (max-width: 600px) {
-    .navBar {
-        display: none;
-    }
 
+
+@media only screen and (max-width: 600px) {
     .desktop {
         display: none;
         align-self: center;
@@ -111,5 +109,9 @@
     .header {
         position: sticky;
         top: 0;
+    }
+
+    .navBar {
+        display: none;
     }
 }
